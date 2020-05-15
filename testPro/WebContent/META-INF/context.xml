@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context docBase="testPro" path="/testPro" reloadable="true">
+
+<!-- mysql연결 -->
+<Resource name="jdbc/mysql" auth="Container"
+type="javax.sql.DataSource"
+driverClassName="com.mysql.jdbc.Driver"
+url="jdbc:mysql://localhost:3306/test?autoReconnect=true"
+username="root"
+password="1234"
+maxWait="5000"
+maxActive="20"
+testOnBorrow="true"
+factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+closeMethod="close"
+/>
+
+<!-- oracle 연결 -->
+<!-- <Resource 
+name="jdbc/oracle"  
+auth="Container" 
+type="javax.sql.DataSource"  
+driverClassName="oracle.jdbc.driver.OracleDriver" 
+url="jdbc:oracle:thin:@localhost:1521:XE"
+username="scott" 
+password="TIGER" 
+maxWait="5000" 
+maxActive="20" 
+testOnBorrow="true"
+factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+closeMethod="close" 
+/> -->
+
+</Context>
